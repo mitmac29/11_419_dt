@@ -30,10 +30,16 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 $(call inherit-product, device/xiaomi/lavender/device.mk)
 
 # Inherit some common revengeos stuff.
-$(call inherit-product, vendor/revengeos/config/common.mk)
-TARGET_BOOT_ANIMATION_RES := 1080
-REVENGEOS_BUILDTYPE := OFFICIAL
+$(call inherit-product, vendor/havoc/config/common_full_phone.mk)
+TARGET_BOOT_ANIMATION_RES := 720
+#TARGET_DISABLE_BLUR := true
+TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
+WITH_GAPPS := true
+TARGET_INCLUDE_LAWNCHAIR := true
+WITH_TWRP := true
+HAVOC_MAINTAINER := MiTESH
+DEVICE_MAINTAINER := MiTESH
 
 # Build Fingerprint
 PRODUCT_BUILD_PROP_OVERRIDES += \
@@ -42,7 +48,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="lavender-user 10 QKQ1.190910.002 V11.0.1.0.QFGMIXM release-keys" 
 
 # Device identifier
-PRODUCT_NAME := revengeos_lavender
+PRODUCT_NAME := havoc_lavender
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_PLATFORM := SDM660
 PRODUCT_DEVICE := lavender
