@@ -7,7 +7,7 @@
 
 # Inherit common tree and GCam makefiles
 $(call inherit-product, device/xiaomi/sdm660-common/sdm660.mk)
-$(call inherit-product-if-exists, packages/apps/GoogleCamera/gcam.mk)
+#$(call inherit-product-if-exists, packages/apps/GoogleCamera/gcam.mk)
 
 # Device Path
 DEVICE_PATH := device/xiaomi/lavender
